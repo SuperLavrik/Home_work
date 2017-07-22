@@ -1,14 +1,11 @@
-def even_or_not(number):
-    if number%1:
-        print("Не целое число")
-        return
+def is_even(number):
     if number%2:
-        print ("Число нечетное")
-        return
+       return False
     else:
-        print("Число четное")
-    return
+        return True
 
-you_number = 890
-print(you_number)
-even_or_not(you_number)
+you_number = 89559654
+if is_even(you_number):
+    print("%d is even" % you_number)
+else:
+    print("%d is not a even" % you_number)
