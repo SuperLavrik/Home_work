@@ -1,7 +1,7 @@
 def sum_code(symbol_1,symbol_2):
     step = 1
     if ord(symbol_1) > ord(symbol_2):   # direction of counting
-        step = -1                       # if first symbol bihind of second
+        step = -1                       # if first symbol behind of second
     total = 0
     for i in range(ord(symbol_1),(ord(symbol_2) + step),step):
         total += i
