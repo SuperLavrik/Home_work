@@ -9,7 +9,11 @@ def is_simple(number):
        return False
     else:
         return True
-print ("Simple numbers less 100 :")
-for i in range(1,100):
+
+lower_bound  = 1
+upper_bound = 100
+print ("Simple numbers more %d and less %d :" %(lower_bound, upper_bound))
+
+for i in range(lower_bound, upper_bound):
     if is_simple(i):
         print (i)
