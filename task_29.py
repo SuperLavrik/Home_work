@@ -11,7 +11,8 @@ print("Basic list:")
 print (list)
 print()
 
-if list_count.count(4) == 2 or list_count.count(5) == 2:
+if list_count[0] == list_count[1] or list_count[0] == list_count[2] \
+        or list_count[1] == list_count[2]:
     pass
 else :
     print ("Element %d repeats %d times " % \
