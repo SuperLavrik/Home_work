@@ -7,21 +7,21 @@ def random_selection(numb):
 code_table = {1: [x for x in string.ascii_lowercase], \
              2 : [x for x in string.digits], \
              3 : [x for x in string.ascii_uppercase]}
-code_table[2].append("_")
 
-number_digit_pass = 8     # in this decisions  must be more 3
+
+number_digit_pass = 8    # in this decisions  must be more 3
 password = []
 
-for i in [1,2,3]:                   # for obligatory symbols
+for i in range(1,len(code_table.keys())):                   # for obligatory symbols
     password.append(random_selection(i))
 
-for _ in range(1,number_digit_pass - 2):
-    password.append(random_selection(random.randint(1,3)))
+code_table[2].append("_")
+
+for _ in range(number_digit_pass - len(code_table.keys()) + 1 ):
+    password.append(random_selection(random.choice\
+                        (list(code_table.keys()))))
 
 random.shuffle(password)
-key_password = ""
+key_password = "".join(password)
 
-for i in password:
-    key_password += i
-
-print ("You %d symbol pasword : %s" %(number_digit_pass,key_password))
+print ("You %d symbol password : %s" %(number_digit_pass,key_password))
